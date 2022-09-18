@@ -4,7 +4,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import id.alianhakim.simpleofflinecaching.data.remote.AddressApi
+import id.alianhakim.simpleofflinecaching.data.remote.RemoteApi
 import id.alianhakim.simpleofflinecaching.utils.Constants.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -24,7 +24,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideAddressApi(retrofit: Retrofit): AddressApi {
-        return retrofit.create(AddressApi::class.java)
+    fun provideAddressApi(retrofit: Retrofit): RemoteApi {
+        return retrofit.create(RemoteApi::class.java)
     }
 }
